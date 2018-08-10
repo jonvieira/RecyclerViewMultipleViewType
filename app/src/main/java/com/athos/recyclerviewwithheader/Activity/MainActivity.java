@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     List<DeserializeModel> mDados;
     String strings = "[ { \"posicao\": \"GOLEIROS\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"ZAGUEIROS\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"LATERAIS ESQUERDOS\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"LATERAIS DIREITOS\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"VOLANTES\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"MEIO-CAMPO\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] }, { \"posicao\": \"ATACANTES\", \"jogadores\": [ { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 }, { \"nome\": \"Roberto dos Anjos\", \"time\": \"São Paulo F.C\", \"idade\": 28 } ] } ]";
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    } 
+    }
 
     @Override
     protected void onStart() {
