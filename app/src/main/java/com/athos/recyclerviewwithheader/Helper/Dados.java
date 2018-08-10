@@ -1,23 +1,25 @@
 package com.athos.recyclerviewwithheader.Helper;
 
-import com.athos.recyclerviewwithheader.Model.ModelDados;
-import com.athos.recyclerviewwithheader.Model.ModelDeserializeDados;
+import com.athos.recyclerviewwithheader.Model.DeserializeModel;
+import com.athos.recyclerviewwithheader.Model.JogadoresModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public final class Dados {
 
-    public static List<ModelDados> getData(List<ModelDeserializeDados> mDadosReferencia) {
-        List<ModelDados> list = new ArrayList<>();
+    public static List<JogadoresModel> getData(List<DeserializeModel> mDados) {
+        List<JogadoresModel> list = new ArrayList<>();
 
-        for (int posPai = 0; posPai < mDadosReferencia.size(); posPai++) {
-            String pai = mDadosReferencia.get(posPai).getFamilia();
-            list.add(new ModelDados(pai, null, ModelDeserializeDados.PAI));
+        for (int posPai = 0; posPai < mDados.size(); posPai++) {
+            String posicaoJogador = mDados.get(posPai).getPosicao();
+            list.add(new JogadoresModel(posicaoJogador, null, 0, DeserializeModel.PAI));
 
-            for (int posFilho = 0; posFilho < mDadosReferencia.get(posPai).getPatrimonios().size(); posFilho++) {
-                String filho = mDadosReferencia.get(posPai).getPatrimonios().get(posFilho).getDescricao();
-                list.add(new ModelDados(filho, null, ModelDeserializeDados.FILHO));
+            for (int posFilho = 0; posFilho < mDados.get(posPai).getJogadores().size(); posFilho++) {
+                String nomeJogador = mDados.get(posPai).getJogadores().get(posFilho).getNome();
+                String timeJogador = mDados.get(posPai).getJogadores().get(posFilho).getTime();
+                int idadeJogador = mDados.get(posPai).getJogadores().get(posFilho).getIdade();
+                list.add(new JogadoresModel(nomeJogador, timeJogador, idadeJogador, DeserializeModel.FILHO));
             }
         }
         return list;
