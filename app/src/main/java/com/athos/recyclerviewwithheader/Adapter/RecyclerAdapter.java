@@ -48,7 +48,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 case FILHO:
                     ((FilhoViewHolder) holder).mNome.setText(object.getmNome());
                     ((FilhoViewHolder) holder).mTime.setText(object.getmTime());
-                    ((FilhoViewHolder) holder).mIdade.setText(object.getmTime());
+                    ((FilhoViewHolder) holder).mIdade.setText(""+object.getmIdade()+" anos");
                     break;
             }
         }
