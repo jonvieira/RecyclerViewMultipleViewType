@@ -6,7 +6,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
-
 import com.athos.recyclerviewwithheader.Helper.Dados;
 import com.athos.recyclerviewwithheader.Model.DeserializeModel;
 import com.athos.recyclerviewwithheader.R;
