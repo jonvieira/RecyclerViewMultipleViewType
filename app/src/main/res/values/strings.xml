@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RecyclerViewWithHeader</string>
+    <string name="textview">TextView</string>
+    <string name="selecao_brasileira">Seleção Brasileira 2018</string>
 </resources>

@@ -47,8 +47,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     break;
                 case FILHO:
                     ((FilhoViewHolder) holder).mNome.setText(object.getmNome());
-                    ((FilhoViewHolder) holder).mTime.setText(object.getmTime());
-                    ((FilhoViewHolder) holder).mIdade.setText(""+object.getmIdade()+" anos");
+                    ((FilhoViewHolder) holder).mTime.setText(String.format("Time: %s", object.getmTime()));
+                    ((FilhoViewHolder) holder).mIdade.setText(String.format("%d anos", object.getmIdade()));
                     break;
             }
         }
@@ -75,7 +75,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public static class PaiViewHolder extends RecyclerView.ViewHolder {
         private TextView mTitle;
 
-        public PaiViewHolder(View itemView) {
+        PaiViewHolder(View itemView) {
             super(itemView);
             mTitle = itemView.findViewById(R.id.titleTextView);
         }
@@ -84,7 +84,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public static class FilhoViewHolder extends RecyclerView.ViewHolder {
         private TextView mNome, mTime, mIdade;
 
-        public FilhoViewHolder(View itemView) {
+        FilhoViewHolder(View itemView) {
             super(itemView);
             mNome = itemView.findViewById(R.id.txtNome);
             mTime = itemView.findViewById(R.id.txtTime);
